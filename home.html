@@ -2,19 +2,62 @@
 <html>
 
 <head>
-<style>
+<h1>CLICK THE ROBLOX NOOB TO GET A SURPRISE! </h1>
+<style>  
   body {
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 20px;
   }
   h1 {
-    color: #ffffff;
+    color: #000000;
     font-size: 50px;
     margin-bottom: 20px;
   }
+
+  #banana-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 139px;
+    height: 139px;
+    border-radius: 10%;
+    overflow: hidden;
+  }
+
+  #banana {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    transition: transform 0.2s ease-in-out;
+  }
+  #banana:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  #banana:active {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  #roblox-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #roblox {
+    width: 139px;
+    height: 139px;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+  }
+
   #roblox-container {
     position: absolute;
     top: 50%;
@@ -31,11 +74,15 @@
     transform: scale(1.1)
   }
 
-  
+  #roblox:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
 </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Random Stuff</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 
 <p><a href="https://www.youtube.com/shorts/a1ySv-0GUdg">
@@ -43,12 +90,31 @@
     <img id="roblox" src="https://cdn-images.dzcdn.net/images/cover/b6cd64709acb2ebf705a2fcc368918f8/1900x1900-000000-80-0-0.jpg" alt="Roblox Image" width="139" height="139">
   </div>
 </a></p>
-  
-  
+
+<div id="banana-container">
+    <img id="banana" 
+         src="https://static.wixstatic.com/media/e6f56d_a2b47380e8504300bfb2844e4a8a5159~mv2.gif" 
+         alt="Banana Image" 
+         width="139" 
+         height="139">
+         
+    <audio id="sound" src="peanut-butter-jelly-time-clip.mp3"></audio>
+  </div>
+
+  <script>
+    const banana = document.getElementById("banana");
+    const sound = document.getElementById("sound");
+
+    banana.addEventListener("mousedown", () => {
+      sound.currentTime = 0;
+      sound.play();
+      setTimeout(() => sound.pause(), 3000); // Stop after 3 seconds
+    });
+  </script>
+
 </head>
 
 <body>
-  <h1>CLICK THE ROBLOX NOOB TO GET A SURPRISE! </h1>
   <script src="script.js"></script>
 </body>
 
